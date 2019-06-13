@@ -57,5 +57,19 @@ pipeline
                 }
             }
         }
+        
+        stage('Deploy To Production')
+        {
+            when
+            {
+                branch 'master'
+            }
+            
+            steps
+            {
+                input 'Deploy to production?'
+                milestone(1)
+            }
+        }
     }
 }
