@@ -10,7 +10,7 @@ spec:
   - protocol: TCP
     port: 8080
     nodePort: 8080
-    
+
 ---
 
 apiVersion: extensions/v1beta1
@@ -21,7 +21,7 @@ metadata:
     app: train-schedule
 spec:
   replicas: 2
-  selector: 
+  selector:
     matchLabels:
       app: train-schedule
   template:
